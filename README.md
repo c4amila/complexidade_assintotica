@@ -70,6 +70,18 @@ def imprimir_pares_e_soma(lista):
 **Complexidade:** O(n²) <br>
 **Justificativa:** apesar de ter um loop percorrendo uma única vez para apenas mostrar todos os valores do vetor - O(n) -, logo depois há loops aninhados para fazer dupla verificação com objetivo de encontrar o máximo de pares possíveis para cada elemento.
 
+### Exercício 6
+```python
+def potencias_de_dois(n): 
+    i = 1 
+
+    while i < n: 
+        print(i) 
+        i *= 2
+```
+**Complexidade:** O(log n) <br>
+**Justificativa:** Fiquei em dúvida entre O(2ⁿ) e O(log n), mas estarei apostando que esse código tem complexidade O(log n) pois está multiplicando o valor de n por 2 até chegar no valor definido pelo usuário, os valores crescem muito devagar.
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
