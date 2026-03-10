@@ -45,6 +45,17 @@ def busca_binaria(lista, alvo):
 **Complexidade:** O(log n) <br>
 **Justificativa:** existe um while que está dividindo o vetor pela metade a cada iteração que faz.
 
+### Exercício 4
+```python
+def pares_com_soma(lista, alvo): 
+    for i in range(len(lista)): 
+        for j in range(i + 1, len(lista)): 
+            if lista[i] + lista[j] == alvo: 
+                print(lista[i], lista[j])
+```
+**Complexidade:** O(n²) <br>
+**Justificativa:** este código faz 2 verificações usando loops aninhados para encontrar todos os pares que somem e resultem o valor que o alvo escolheu, para cada elemento do vetor ele compara com todos os outros na frente.
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
