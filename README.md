@@ -56,6 +56,20 @@ def pares_com_soma(lista, alvo):
 **Complexidade:** O(n²) <br>
 **Justificativa:** este código faz 2 verificações usando loops aninhados para encontrar todos os pares que somem e resultem o valor que o alvo escolheu, para cada elemento do vetor ele compara com todos os outros na frente.
 
+### Exercício 5
+```python
+def imprimir_pares_e_soma(lista): 
+    # Bloco 1: imprime cada elemento 
+    for i in range(len(lista)):
+        print(lista[i])
+    # Bloco 2: imprime todos os pares 
+    for i in range(len(lista)): 
+        for j in range(len(lista)): 
+            print(lista[i], lista[j])
+```
+**Complexidade:** O(n²) <br>
+**Justificativa:** apesar de ter um loop percorrendo uma única vez para apenas mostrar todos os valores do vetor - O(n) -, logo depois há loops aninhados para fazer dupla verificação com objetivo de encontrar o máximo de pares possíveis para cada elemento.
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
