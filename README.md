@@ -82,6 +82,16 @@ def potencias_de_dois(n):
 **Complexidade:** O(log n) <br>
 **Justificativa:** Fiquei em dúvida entre O(2ⁿ) e O(log n), mas estarei apostando que esse código tem complexidade O(log n) pois está multiplicando o valor de n por 2 até chegar no valor definido pelo usuário, os valores crescem muito devagar.
 
+### Exercício 7
+```python
+def fibonacci_recursivo(n): 
+    if n <= 1: 
+        return n 
+    return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
+```
+**Complexidade:** O(2ⁿ) <br>
+**Justificativa:** este código tem complexidade O(2ⁿ) pois o crescimento deste já é muito maior que o logarítmico, cada chamada está gerado 2 novas chamadas: (n-1) e (n-2).
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
