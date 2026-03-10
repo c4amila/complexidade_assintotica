@@ -14,6 +14,16 @@ def verificar_primeiro(lista):
 **Complexidade:** O(1) <br>
 **Justificativa:** É um código que não está usando nenhum loop, está acessando apenas o primeiro elemento de uma lista de forma imediata.
 
+### Exercício 2
+```python
+def somar_lista(lista): 
+    total = 0 
+    for elemento in lista:
+        total += elemento 
+    return total 
+```
+**Complexidade:** O(n) <br>
+**Justificativa:** por ser um loop único e que executa a soma para cada elemento da lista. Se dobrar os dados, o tempo irá dobrar.
 
 ## Principais Notações Utilizadas
 
