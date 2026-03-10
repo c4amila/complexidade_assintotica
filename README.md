@@ -92,10 +92,23 @@ def fibonacci_recursivo(n):
 **Complexidade:** O(2ⁿ) <br>
 **Justificativa:** este código tem complexidade O(2ⁿ) pois o crescimento deste já é muito maior que o logarítmico, cada chamada está gerado 2 novas chamadas: (n-1) e (n-2).
 
+### Exercício 8
+```python
+def ordenacao_bolha(lista): 
+    n = len(lista) 
+    for i in range(n): 
+        for j in range(0, n - i - 1): 
+            if lista[j] > lista[j + 1]: 
+                lista[j], lista[j + 1] = lista[j + 1], lista[j] 
+    return lista
+```
+**Complexidade:** O(n²) <br>
+**Justificativa:** este código contém loops aninhados fazendo duas comparações: o i verifica quantas passagens serão feitas e o j compara os valores próximos, caso o elemento atual seja maior que o próximo, ele troca os valores, jogando o maior para o final da lista. 
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
-|:-------------:|:-----------:|:---------|
+|:----------:|:-----------:|:---------|
 | O(1) | Tempo constante | Acesso a um elemento de um array |
 | O(log n) | Tempo logarítmico | Busca binária |
 | O(n) | Tempo linear | Percorrer um Array |
