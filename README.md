@@ -25,6 +25,26 @@ def somar_lista(lista):
 **Complexidade:** O(n) <br>
 **Justificativa:** por ser um loop único e que executa a soma para cada elemento da lista. Se dobrar os dados, o tempo irá dobrar.
 
+### Exercício 3
+```python
+def busca_binaria(lista, alvo): 
+    esquerda, direita = 0, len(lista) - 1
+
+    while esquerda <= direita: 
+        meio = (esquerda + direita) // 2 
+
+        if lista[meio] == alvo: 
+            return meio 
+        elif lista[meio] < alvo: 
+            esquerda = meio + 1 
+        else: 
+            direita = meio - 1 
+
+    return -1
+```
+**Complexidade:** O(log n) <br>
+**Justificativa:** existe um while que está dividindo o vetor pela metade a cada iteração que faz.
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
