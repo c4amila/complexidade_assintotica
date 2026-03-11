@@ -118,6 +118,35 @@ def produto_de_matrizes(A, B, n):
 **Complexidade:** O(n³) <br>
 **Justificativa:** Contém 3 loops aninhados realizando 3 operações: i percorre cada linha da primeira matriz, j percorre cada linha da segunda matriz e k percorre as linhas e colunas, realizando a multiplicação das matrizes. Ou seja, está ocorrendo operações n * n * n, ao invés de ter complexidade O(n²), será O(n³).
 
+### Exercício 10
+```python
+def merge_sort(lista):
+    if len(lista) <= 1:
+        return lista
+
+    meio = len(lista) // 2
+    esquerda = merge_sort(lista[:meio])
+    direita = merge_sort(lista[meio:])
+
+    resultado = []
+    i = j = 0
+
+    while i < len(esquerda) and j < len(direita):
+        if esquerda[i] <= direita[j]:
+            resultado.append(esquerda[i])
+            i += 1
+        else:
+            resultado.append(direita[j])
+            j += 1
+
+    resultado.extend(esquerda[i:])
+    resultado.extend(direita[j:])
+
+    return resultado
+```
+**Complexidade:** O(n log n) <br>
+**Justificativa:** Esse código trabalha dividindo a lista pela metade - O(n log n) -, enquanto usa um loop para percorrer toda a lista a cada iteração e logo em seguida junta a lista de maneira ordenada. Então o que faz mais sentido é ele ter a complexidade O(n log n).
+
 ## Principais Notações Utilizadas
 
 | Complexidade | Descrição | Exemplo |
