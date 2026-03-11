@@ -103,7 +103,20 @@ def ordenacao_bolha(lista):
     return lista
 ```
 **Complexidade:** O(n²) <br>
-**Justificativa:** este código contém loops aninhados fazendo duas comparações: o i verifica quantas passagens serão feitas e o j compara os valores próximos, caso o elemento atual seja maior que o próximo, ele troca os valores, jogando o maior para o final da lista. 
+**Justificativa:** este código contém loops aninhados fazendo duas comparações: o i verifica quantas passagens serão feitas e o j compara os valores próximos, caso o elemento atual seja maior que o próximo, ele troca os valores, jogando o maior para o final da lista.
+
+### Exercício 9
+```python
+def produto_de_matrizes(A, B, n): 
+    C = [[0] * n for _ in range(n)] 
+    for i in range(n): 
+        for j in range(n): 
+            for k in range(n): 
+                C[i][j] += A[i][k] * B[k][j] 
+    return C
+```
+**Complexidade:** O(n³) <br>
+**Justificativa:** Contém 3 loops aninhados realizando 3 operações: i percorre cada linha da primeira matriz, j percorre cada linha da segunda matriz e k percorre as linhas e colunas, realizando a multiplicação das matrizes. Ou seja, está ocorrendo operações n * n * n, ao invés de ter complexidade O(n²), será O(n³).
 
 ## Principais Notações Utilizadas
 
